@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+}
+
+@mixin borderRad {
+    border-radius: 1em;
+}
+
+@mixin borderSdw {
+    -webkit-box-shadow: 3px 3px 21px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 21px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 21px 0px rgba(0, 0, 0, 0.75);
+}
+
+* {
+    box-sizing: content-box;
+    font-family: "Lora", serif;
+}
+
+body {
+    @include grid();
+    height: 100vh;
+    margin: 0px;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-size: 14px 14px;
+    background-image: repeating-linear-gradient(to right, #a7a7a7, #a7a7a7 0.7000000000000001px, #e5e5f7 0.7000000000000001px, #e5e5f7);
+}
+
+#root {
+    grid-row: 2;
+    grid-column: 2;
+    background-color: aliceblue;
+    @include borderRad();
+    @include borderSdw();
+    @include grid();
+}
