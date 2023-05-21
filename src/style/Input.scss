@@ -1,0 +1,31 @@
+$bottom_radius: 1em;
+
+#inputField {
+    grid-row: 3;
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: 0.9fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.1em;
+
+    * {
+        border: none;
+    }
+}
+
+#username {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#message {
+    grid-column: 1;
+    grid-row: 2;
+    border-bottom-left-radius: $bottom_radius;
+}
+
+#submit {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    border-bottom-right-radius: $bottom_radius;
+}

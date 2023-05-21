@@ -46,7 +46,7 @@ const testData: testData = {
     },
     8: {
         name: "fjisdlvjdsoisd",
-        msg: "hvuieioeoie",
+        msg: "iosidsjifdjijakdsjkdsfajkljkalksdfjklajfkakfasjkdljkfldsfjskdl",
         date: todayDate + " " + todayTime
     }
 }
@@ -80,8 +80,8 @@ function Board() {
     }
 
     function randomColor() {
-        const hex = ["#f4d35e", "#b8b8ff", "#ecf39e", "#fdc5f5", "#ff0054", "#ffb100", "fb8b24"]
-        const result = Math.floor(Math.random()* hex.length-1);
+        const hex = ["#cbc0d3","#e07a5f","#FF99C8", "#FCF6BD", "#D0F4DE","#A9DEF9", "#E4C1F9"]
+        const result = Math.floor(Math.random()* hex.length);
         const style:React.CSSProperties = {
             backgroundColor: hex[result]
         };
