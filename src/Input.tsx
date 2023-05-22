@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react";
 import "./style/Input.scss"
 
 
 function Input() {
-    const [data, setData]: any = useState<handleSub>();
-    const [counter, setCounter]: any = useState(1);
     const date = new Date();
     const todayDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     const todayTime = date.getHours() + ":" + date.getMinutes();
@@ -27,26 +24,13 @@ function Input() {
         }
     }
 
-    interface handleSub {
-        [key: number]: {
-            name: string;
-            msg: string;
-            date: string;
-        }
-    }
-
     const handleSub = (event: any) => {
         event.preventDefault();
-        setCounter(counter + 1);
         const result = {
-            ...data,
-            [counter]: {
                 name: event.target.name.value,
                 msg: event.target.msg.value,
                 date: `${todayDate} ${todayTime}`
-            }
         }
-        setData(result);
         sendMsg(result);
         event.target.name.value = "";
         event.target.msg.value = "";

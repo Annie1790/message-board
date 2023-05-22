@@ -46,7 +46,7 @@ function Board() {
         const arr = [];
         for (let segment in data) {
             arr.push(
-                < div className="msgBubble">
+                < div className="msgBubble" style={{backgroundColor: data[segment].color}}>
                     <span className="msgName">{data[segment].name}</span>
                     <span className="msgDate">{data[segment].date}</span>
                     <p className="msgBody">{data[segment].msg}</p>
